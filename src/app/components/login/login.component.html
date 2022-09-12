@@ -1,0 +1,32 @@
+<div class="grid">
+  <div>
+    <div>
+      <form [formGroup]="loginForm" name="loginForm" (ngSubmit)="login()">
+        <div>
+          <label>Username</label>
+          <input
+            formControlName="username"
+            name="username"
+            type="username"
+            autofocus
+            pInputText
+          />
+        </div>
+        <div>
+          <label>Password</label>
+          <p-password
+            [feedback]="false"
+            [required]="true"
+            formControlName="password"
+            name="password"
+          >
+          </p-password>
+        </div>
+        <div>
+          <p-button [disabled]="!loginForm.valid" label="Submit" type="submit">
+          </p-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
